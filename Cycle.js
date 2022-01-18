@@ -27,7 +27,7 @@ function Cycle(player, x0, y0){
     for(var i = 0; i < this.tail.length-1; i++){//check if cycle hit itself
       var pos = this.tail[i];
       var e = dist(this.x, this.y, pos.x, pos.y);
-      if(e < scl*2 || this.x < 0 || this.y < 0 || this.x > width || this.y > height){
+      if(e < scl || this.x < 0 || this.y < 0 || this.x > width || this.y > height){
         end = true;
         if(player==1) win = '2';
         else win = '1';
@@ -94,7 +94,7 @@ function Cycle(player, x0, y0){
 
     this.x = constrain(this.x, -scl, width + scl);
     this.y = constrain(this.y, -scl, height + scl);
-    if(this.total < 150)this.total++;
+    if(this.total < 100) this.total++;
   }
 
   this.show = function(){
