@@ -10,8 +10,8 @@ var start = false;
 function setup(){
   var cnv = createCanvas(600, 400);
   cnv.center();
-  c = new Cycle(1, 0, 0);
-  d = new Cycle(2, width-scl, height-scl);
+  c = new Cycle(1, 0, height/2);
+  d = new Cycle(2, width, height/2);
 }
 
 function draw(){
