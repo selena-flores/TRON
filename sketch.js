@@ -7,10 +7,6 @@ var player;
 var win = '';
 var start = false;
 
-// function preload(){
-//     song = loadSound('01_asfarasenergy.mp3');
-// }
-
 function setup(){
   var cnv = createCanvas(600, 400);
   cnv.center();
@@ -77,7 +73,6 @@ function keyPressed(){
       restartGame();
     } else {
       if(!start){
-        // song.loop();
         start = true;
       }
       pause = !pause;
